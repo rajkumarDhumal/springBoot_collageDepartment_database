@@ -13,11 +13,10 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer>{
 
 	List<Employee> findByDepartment(Optional<Department> department);
 	
-	Employee findByempName(String empName);
 	
 //	List<Employee> findByOrderByempCityAsc();
 //	List<Employee> findByOrderByEmpNameAsc();
 //	List<Employee> findByOrderByempBirthdateAsc();
 
-//	List<Employee> findByEmpNameContaining(String empName, Sort sort);
+	List<Employee> findByEmpNameContaining(String empName, Sort sort);
 }
